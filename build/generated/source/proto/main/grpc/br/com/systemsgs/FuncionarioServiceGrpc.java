@@ -27,29 +27,29 @@ public final class FuncionarioServiceGrpc {
   public static final String SERVICE_NAME = "br.com.systemsgs.FuncionarioService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<br.com.systemsgs.FuncionarioRequest,
-      br.com.systemsgs.FuncionarioResponse> getCadastrarMethod;
+  private static volatile io.grpc.MethodDescriptor<br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest,
+      br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse> getCadastrarMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "cadastrar",
-      requestType = br.com.systemsgs.FuncionarioRequest.class,
-      responseType = br.com.systemsgs.FuncionarioResponse.class,
+      requestType = br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest.class,
+      responseType = br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<br.com.systemsgs.FuncionarioRequest,
-      br.com.systemsgs.FuncionarioResponse> getCadastrarMethod() {
-    io.grpc.MethodDescriptor<br.com.systemsgs.FuncionarioRequest, br.com.systemsgs.FuncionarioResponse> getCadastrarMethod;
+  public static io.grpc.MethodDescriptor<br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest,
+      br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse> getCadastrarMethod() {
+    io.grpc.MethodDescriptor<br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest, br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse> getCadastrarMethod;
     if ((getCadastrarMethod = FuncionarioServiceGrpc.getCadastrarMethod) == null) {
       synchronized (FuncionarioServiceGrpc.class) {
         if ((getCadastrarMethod = FuncionarioServiceGrpc.getCadastrarMethod) == null) {
           FuncionarioServiceGrpc.getCadastrarMethod = getCadastrarMethod =
-              io.grpc.MethodDescriptor.<br.com.systemsgs.FuncionarioRequest, br.com.systemsgs.FuncionarioResponse>newBuilder()
+              io.grpc.MethodDescriptor.<br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest, br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "cadastrar"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  br.com.systemsgs.FuncionarioRequest.getDefaultInstance()))
+                  br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  br.com.systemsgs.FuncionarioResponse.getDefaultInstance()))
+                  br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse.getDefaultInstance()))
               .setSchemaDescriptor(new FuncionarioServiceMethodDescriptorSupplier("cadastrar"))
               .build();
         }
@@ -108,8 +108,8 @@ public final class FuncionarioServiceGrpc {
 
     /**
      */
-    public void cadastrar(br.com.systemsgs.FuncionarioRequest request,
-        io.grpc.stub.StreamObserver<br.com.systemsgs.FuncionarioResponse> responseObserver) {
+    public void cadastrar(br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest request,
+        io.grpc.stub.StreamObserver<br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getCadastrarMethod(), responseObserver);
     }
 
@@ -119,8 +119,8 @@ public final class FuncionarioServiceGrpc {
             getCadastrarMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                br.com.systemsgs.FuncionarioRequest,
-                br.com.systemsgs.FuncionarioResponse>(
+                br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest,
+                br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse>(
                   this, METHODID_CADASTRAR)))
           .build();
     }
@@ -142,8 +142,8 @@ public final class FuncionarioServiceGrpc {
 
     /**
      */
-    public void cadastrar(br.com.systemsgs.FuncionarioRequest request,
-        io.grpc.stub.StreamObserver<br.com.systemsgs.FuncionarioResponse> responseObserver) {
+    public void cadastrar(br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest request,
+        io.grpc.stub.StreamObserver<br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCadastrarMethod(), getCallOptions()), request, responseObserver);
     }
@@ -165,7 +165,7 @@ public final class FuncionarioServiceGrpc {
 
     /**
      */
-    public br.com.systemsgs.FuncionarioResponse cadastrar(br.com.systemsgs.FuncionarioRequest request) {
+    public br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse cadastrar(br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest request) {
       return blockingUnaryCall(
           getChannel(), getCadastrarMethod(), getCallOptions(), request);
     }
@@ -187,8 +187,8 @@ public final class FuncionarioServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<br.com.systemsgs.FuncionarioResponse> cadastrar(
-        br.com.systemsgs.FuncionarioRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse> cadastrar(
+        br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCadastrarMethod(), getCallOptions()), request);
     }
@@ -214,8 +214,8 @@ public final class FuncionarioServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CADASTRAR:
-          serviceImpl.cadastrar((br.com.systemsgs.FuncionarioRequest) request,
-              (io.grpc.stub.StreamObserver<br.com.systemsgs.FuncionarioResponse>) responseObserver);
+          serviceImpl.cadastrar((br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioRequest) request,
+              (io.grpc.stub.StreamObserver<br.com.systemsgs.FuncionarioServiceOuterClass.FuncionarioResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -239,7 +239,7 @@ public final class FuncionarioServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return br.com.systemsgs.Protobuf.getDescriptor();
+      return br.com.systemsgs.FuncionarioServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override
