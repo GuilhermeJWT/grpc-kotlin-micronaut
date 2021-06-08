@@ -18,6 +18,8 @@ class FuncionarioEndpoint : FuncionarioServiceGrpc.FuncionarioServiceImplBase(){
 
     override fun cadastrar(request: FuncionarioServiceOuterClass.FuncionarioRequest?, responseObserver: StreamObserver<FuncionarioServiceOuterClass.FuncionarioResponse>?){
 
+        println(request!!)
+
         val instant = LocalDateTime.now().atZone(ZoneId.of("UTC")).toInstant()
         val nome = request?.nome
         val criadoEm = Timestamp.newBuilder().setSeconds(instant.epochSecond).setNanos(instant.nano).build()
@@ -26,6 +28,9 @@ class FuncionarioEndpoint : FuncionarioServiceGrpc.FuncionarioServiceImplBase(){
             .setNome(nome)
             .setCriadoEm(criadoEm)
             .build()
+
+        responseObserver?.onNext(response)
+        responseObserver?.onCompleted()
 
     }
 
