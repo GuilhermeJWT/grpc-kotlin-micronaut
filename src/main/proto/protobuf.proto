@@ -7,14 +7,24 @@ option objc_class_prefix = "HLW";
 
 package br.com.systemsgs;
 
-service ProtobufService {
-  rpc send (ProtobufRequest) returns (ProtobufReply) {}
+service FuncionarioService {
+
+  rpc cadastrar(FuncionarioRequest) returns (FuncionarioResponse){
+
+  }
+
 }
 
-message ProtobufRequest {
-  string name = 1;
+message FuncionarioRequest {
+  string nome = 1;
+  string cpf = 2;
+  int32 idade = 3;
+  double salario = 4;
+  bool ativo = 5;
+  Cargo cargo = 6;
+  repeated string enderecos = 7;
 }
 
-message ProtobufReply {
-  string message = 1;
+message FuncionarioResponse {
+
 }
